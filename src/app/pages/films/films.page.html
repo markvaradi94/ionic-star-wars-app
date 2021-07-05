@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Films</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+<!--  <ion-button color="dark" expand="full" routerLink="/tabs/films/42" routerDirection="forward">Go to Details with Link-->
+<!--  </ion-button>-->
+<!--  <ion-button color="dark" expand="full" (click)="goToPlanets()">Switch to Planets</ion-button>-->
+<!--  <ion-button color="dark" expand="full" routerLink="/tabs/people" routerDirection="forward">Switch to People-->
+<!--  </ion-button>-->
+
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let film of (films | async)?.results" (click)="openDetails(film)">
+      {{ film.title }}
+    </ion-item>
+  </ion-list>
+</ion-content>
